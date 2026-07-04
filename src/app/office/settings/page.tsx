@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function OfficeSettingsPage() {
-  const { saveGame, loadGame } = useGameStore();
+  const { saveGame, loadGame, currentSaveSlot } = useGameStore();
   const router = useRouter();
   const [message, setMessage] = useState("");
 
@@ -18,7 +18,7 @@ export default function OfficeSettingsPage() {
   };
 
   const handleLoad = () => {
-    const success = loadGame();
+    const success = loadGame(currentSaveSlot);
     if (success) {
       setMessage("GAME LOADED SUCCESSFULLY.");
     } else {
