@@ -8,7 +8,7 @@ export default function DayEndShutter() {
 
   return (
     <div 
-      className={`fixed inset-0 z-50 flex flex-col items-center justify-center transition-transform duration-[1500ms] ease-[cubic-bezier(0.2,1,0.2,1)] ${isDayEnded ? 'translate-y-0' : '-translate-y-full'}`}
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-center transition-transform duration-[1500ms] ease-[cubic-bezier(0.2,1,0.2,1)] ${isDayEnded ? 'translate-y-0' : '-translate-y-[150vh] pointer-events-none'}`}
     >
       <div className={`absolute inset-0 bg-[#1a1715]/80 backdrop-blur-sm transition-opacity duration-1000 ${isDayEnded ? 'opacity-100 delay-500' : 'opacity-0'}`} />
       
